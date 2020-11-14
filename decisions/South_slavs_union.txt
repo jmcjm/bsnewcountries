@@ -1,0 +1,60 @@
+country_decisions = {
+
+	South_slavs_union = {
+		major = yes
+		potential = {
+			NOT = { tag = HUN }
+			NOT = { tag = WAL }
+			NOT = { tag = BYZ }
+			NOT = { tag = VEN }
+			NOT = { tag = TUR }
+			NOT = { tag = TRA }
+			NOT = { tag = SEM }
+			OR = {
+				primary_culture = serbian
+				primary_culture = Bosnian
+				primary_culture = croatian
+				primary_culture = albanian
+				primary_culture = bulgarian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 16
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = SSU }
+			
+                    owns_core_province = 1826
+                    owns_core_province = 152
+                    owns_core_province = 3002
+					owns_core_province = 1766
+                    owns_core_province = 4174
+					owns_core_province = 159
+					owns_core_province = 2750
+					owns_core_province = 4173
+					owns_core_province = 137
+					owns_core_province = 2746
+		}
+	 	effect = {
+			change_tag = SSU
+			set_government_rank = 2
+			change_government = administrative_monarchy
+			change_primary_culture = serbian
+			add_accepted_culture = Bosnian
+			add_accepted_culture = croatian
+			add_accepted_culture = albanian
+			add_accepted_culture = bulgarian
+			add_prestige = 65
+			if = {
+				ai_will_do = {
+					factor = 400
+			}
+		}
+	}

@@ -1,0 +1,16 @@
+#Slavic_empire
+
+graphical_culture = easterngfx
+
+color = { 36 136 192 }
+
+historical_idea_groups = {
+	diplomatic_ideas
+	humanist_ideas	
+	trade_ideas
+	offensive_ideas
+	administrative_ideas
+	defensive_ideas
+	aristocracy_ideas	
+	quality_ideas
+}

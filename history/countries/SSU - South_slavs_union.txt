@@ -1,0 +1,8 @@
+government = administrative_monarchy
+primary_culture = serbian
+add_accepted_culture = Bosnian
+add_accepted_culture = croatian
+add_accepted_culture = albanian
+add_accepted_culture = bulgarian
+religion = catholic
+technology_group = eastern

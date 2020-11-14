@@ -1,0 +1,16 @@
+#West_slavs_union
+
+graphical_culture = easterngfx
+
+color = { 216 31 22 }
+
+historical_idea_groups = {
+	diplomatic_ideas
+	humanist_ideas	
+	trade_ideas
+	offensive_ideas
+	administrative_ideas
+	defensive_ideas
+	aristocracy_ideas	
+	quality_ideas
+}

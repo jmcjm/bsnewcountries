@@ -1,0 +1,85 @@
+country_decisions = {
+	Belorusia_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = MOS }
+			NOT = { tag = RUS }
+			NOT = { tag = LIT }
+			NOT = { tag = POL }
+			NOT = { tag = PLC }
+			NOT = { tag = BLR }
+			NOT = { has_country_flag = formed_byelorussian_flag }
+			OR = {
+				primary_culture = byelorussian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 276
+				province_id = 278
+				province_id = 275
+				province_id = 4246
+				province_id = 4115	 
+				province_id = 1941
+				province_id = 4242
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 13
+			is_subject = no
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no	
+			NOT = { exists = BLR }
+				owns_core_province = 276
+                owns_core_province = 278
+                owns_core_province = 275
+				owns_core_province = 4246
+                owns_core_province = 4115
+				owns_core_province = 1941
+				owns_core_province = 4242
+		}
+	 	effect = {
+			change_tag = BLR
+			add_prestige = 30
+			set_capital = 276
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = {
+					OR = {
+						has_reform = veche_republic
+						has_reform = principality
+					}
+				}
+				change_government = monarchy
+				set_government_rank = 3
+				add_government_reform = tsardom
+			}
+			set_country_flag = formed_byelorussian_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
+
+			

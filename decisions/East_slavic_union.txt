@@ -1,0 +1,78 @@
+country_decisions = {
+	east_slavic_union = {
+		major = yes
+		potential = {
+			NOT = { tag = SEM }
+			NOT = { has_country_flag = formed_esu_flag }
+			OR = {
+				primary_culture = russian
+				primary_culture = novgorodian
+				primary_culture = ryazanian
+				primary_culture = byelorussian
+				primary_culture = ruthenian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 16
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = ESU }
+                    owns_core_province = 276
+                    owns_core_province = 4246
+                    owns_core_province = 4242
+					owns_core_province = 1941
+                    owns_core_province = 282
+					owns_core_province = 291
+					owns_core_province = 1945
+					owns_core_province = 4255
+					owns_core_province = 293
+					owns_core_province = 4243
+					owns_core_province = 300
+					owns_core_province = 4260
+					owns_core_province = 274
+					owns_core_province = 33
+					owns_core_province = 1776
+					owns_core_province = 1755
+					owns_core_province = 2423
+					owns_core_province = 308
+					owns_core_province = 1752
+					owns_core_province = 4245
+					owns_core_province = 275
+		}
+	 	effect = {
+			change_tag = ESU
+			if = {
+				limit = {
+					OR = {
+						has_reform = veche_republic
+						has_reform = principality
+					}
+				}
+				change_government = monarchy
+				set_government_rank = 3
+				add_government_reform = tsardom
+			}
+			set_country_flag = formed_esu_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			change_primary_culture = russian
+			add_accepted_culture = novgorodian
+			add_accepted_culture = ryazanian
+			add_accepted_culture = byelorussian
+			add_accepted_culture = ruthenian
+			add_prestige = 100
+			if = {
+				ai_will_do = {
+					factor = 400
+			}
+		}
+	}

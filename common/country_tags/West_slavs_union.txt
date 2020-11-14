@@ -1,0 +1,1 @@
+WSU = "countries/West_slavs_union.txt"

@@ -1,0 +1,121 @@
+country_decisions = {
+
+	Slavic_empire = {
+		major = yes
+		potential = {
+			NOT = { tag = HUN }
+			NOT = { tag = TEU }
+			NOT = { tag = PRU }
+			NOT = { tag = HUN }
+			NOT = { tag = WAL }
+			NOT = { tag = BYZ }
+			NOT = { tag = VEN }
+			NOT = { tag = TUR }
+			NOT = { tag = TRA }
+			NOT = { tag = LIT }
+			NOT = { tag = CRI }
+			NOT = { tag = GLH }
+			NOT = { tag = NOG }
+			NOT = { has_country_flag = formed_se_flag }
+			OR = {
+				primary_culture = polish
+				primary_culture = czech
+				primary_culture = kashubian
+				primary_culture = schlesian
+				primary_culture = slovak
+				primary_culture = russian
+				primary_culture = novgorodian
+				primary_culture = ryazanian
+				primary_culture = byelorussian
+				primary_culture = ruthenian
+				primary_culture = serbian
+				primary_culture = Bosnian
+				primary_culture = croatian
+				primary_culture = albanian
+				primary_culture = bulgarian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+				poland_region = {
+					type = all
+					owned_by = ROOT
+			}
+				ruthenia_region = {
+					type = all
+					owned_by = ROOT
+			}
+				russia_region = {
+					type = all
+					owned_by = ROOT
+			}
+			adm_tech = 25
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = SEM }
+
+                    owns_core_province = 267
+					owns_core_province = 266
+                    owns_core_province = 2970
+					owns_core_province = 162
+					owns_core_province = 154
+					owns_core_province = 1772
+					owns_core_province = 4236
+					owns_core_province = 4173
+					owns_core_province = 1766
+					owns_core_province = 3000
+					owns_core_province = 139
+					owns_core_province = 137
+					owns_core_province = 1826
+					owns_core_province = 152
+					owns_core_province = 4174
+					owns_core_province = 137
+					owns_core_province = 141
+					owns_core_province = 3002
+		}
+	 	effect = {
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			change_tag = SEM
+			set_government_rank = 3
+			change_government = administrative_monarchy
+			add_accepted_culture = czech
+			add_accepted_culture = polish
+			add_accepted_culture = kashubian
+			add_accepted_culture = schlesian
+			add_accepted_culture = slovak
+			add_accepted_culture = serbian
+			add_accepted_culture = Bosnian
+			add_accepted_culture = croatian
+			add_accepted_culture = albanian
+			add_accepted_culture = bulgarian
+			add_accepted_culture = russian
+			add_accepted_culture = novgorodian
+			add_accepted_culture = ryazanian
+			add_accepted_culture = byelorussian
+			add_accepted_culture = ruthenian
+			add_prestige = 100
+			set_country_flag = formed_se_flag
+			if = {
+				ai_will_do = {
+					factor = 400
+			}
+		}
+	}

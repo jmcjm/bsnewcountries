@@ -1,0 +1,8 @@
+government = administrative_monarchy
+primary_culture = polish
+add_accepted_culture = czech
+add_accepted_culture = kashubian
+add_accepted_culture = schlesian
+add_accepted_culture = slovak
+religion = catholic
+technology_group = eastern

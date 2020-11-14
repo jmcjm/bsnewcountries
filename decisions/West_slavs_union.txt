@@ -1,0 +1,72 @@
+country_decisions = {
+
+	West_slavs_union = {
+		major = yes
+		potential = {
+			NOT = { tag = MOS }
+			NOT = { tag = RUS }
+			NOT = { tag = HUN }
+			NOT = { tag = TEU }
+			NOT = { tag = PRU }
+			NOT = { tag = BLR }
+			NOT = { tag = SEM }
+			OR = {
+				primary_culture = polish
+				primary_culture = czech
+				primary_culture = kashubian
+				primary_culture = schlesian
+				primary_culture = slovak
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 3
+				}
+			}
+		}
+		allow = {
+			adm_tech = 16
+			is_subject = no
+			is_at_war = no
+			NOT = { exists = WSU }
+            owns_core_province = 257
+            owns_core_province = 43
+            owns_core_province = 266
+			owns_core_province = 1772
+            owns_core_province = 254
+			owns_core_province = 264
+			owns_core_province = 162
+			owns_core_province = 267
+			owns_core_province = 265
+
+		}
+	 	effect = {
+			if = {
+				limit = {
+					is_part_of_hre = yes
+					is_elector = no
+					is_emperor = no
+				}
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			change_tag = WSU
+			set_government_rank = 2
+			change_government = administrative_monarchy
+			change_primary_culture = polish
+			add_accepted_culture = czech
+			add_accepted_culture = kashubian
+			add_accepted_culture = schlesian
+			add_accepted_culture = slovak
+			add_prestige = 65
+			if = {
+				ai_will_do = {
+					factor = 400
+			}
+		}
+	}
