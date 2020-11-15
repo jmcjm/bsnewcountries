@@ -8,5 +8,5 @@ tags={
 }
 name="Better slavs: New nation (addon)"
 supported_version="1.30.4"
-path="/home/jmc/.local/share/Steam/steamapps/workshop/content/236850/bsnewcoutries"
-remote_file_id="bsnewcoutries"
+path="/home/jmc/.local/share/Steam/steamapps/workshop/content/236850/bsnewcountries"
+remote_file_id="bsnewcountries"
